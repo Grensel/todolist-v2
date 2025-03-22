@@ -1,15 +1,15 @@
-import { changeThemeModeAC } from '@/app/app-reducer'
-import { selectThemeMode } from '@/app/app-selectors'
-import { useAppDispatch, useAppSelector } from '@/common/hooks'
-import { containerSx } from '@/common/styles'
-import { getTheme } from '@/common/theme'
-import MenuIcon from '@mui/icons-material/Menu'
-import AppBar from '@mui/material/AppBar'
-import Container from '@mui/material/Container'
-import IconButton from '@mui/material/IconButton'
-import Switch from '@mui/material/Switch'
-import Toolbar from '@mui/material/Toolbar'
-import { NavButton } from '../NavButton/NavButton'
+import { changeThemeModeAC } from "@/app/app-reducer"
+import { selectThemeMode } from "@/app/app-selectors"
+import { useAppDispatch, useAppSelector } from "@/common/hooks"
+import { containerSx } from "@/common/styles"
+import { getTheme } from "@/common/theme"
+import MenuIcon from "@mui/icons-material/Menu"
+import AppBar from "@mui/material/AppBar"
+import Container from "@mui/material/Container"
+import IconButton from "@mui/material/IconButton"
+import Switch from "@mui/material/Switch"
+import Toolbar from "@mui/material/Toolbar"
+import { NavButton } from "../NavButton/NavButton"
 
 export const Header = () => {
   const themeMode = useAppSelector(selectThemeMode)
@@ -19,13 +19,13 @@ export const Header = () => {
   const theme = getTheme(themeMode)
 
   const changeMode = () => {
-    dispatch(changeThemeModeAC({ themeMode: themeMode === 'light' ? 'dark' : 'light' }))
+    dispatch(changeThemeModeAC({ themeMode: themeMode === "light" ? "dark" : "light" }))
   }
 
   return (
-    <AppBar position="static" sx={{ mb: '30px' }}>
+    <AppBar position="static" sx={{ mb: "30px" }}>
       <Toolbar>
-        <Container maxWidth={'lg'} sx={containerSx}>
+        <Container maxWidth={"lg"} sx={containerSx}>
           <IconButton color="inherit">
             <MenuIcon />
           </IconButton>
@@ -33,7 +33,7 @@ export const Header = () => {
             <NavButton>Sign in</NavButton>
             <NavButton>Sign up</NavButton>
             <NavButton background={theme.palette.primary.dark}>Faq</NavButton>
-            <Switch color={'default'} onChange={changeMode} />
+            <Switch color={"default"} onChange={changeMode} />
           </div>
         </Container>
       </Toolbar>

@@ -1,17 +1,17 @@
-import { EditableSpan } from '@/common/components/'
-import { useAppDispatch } from '@/common/hooks/'
+import { EditableSpan } from "@/common/components/"
+import { useAppDispatch } from "@/common/hooks/"
 import {
   changeTaskStatusAC,
   changeTaskTitleAC,
   deleteTaskAC,
-  type Task
-} from '@/features/todolists/model/tasks-reducer'
-import DeleteIcon from '@mui/icons-material/Delete'
-import Checkbox from '@mui/material/Checkbox'
-import IconButton from '@mui/material/IconButton'
-import ListItem from '@mui/material/ListItem'
-import type { ChangeEvent } from 'react'
-import { getListItemSx } from './TaskItem.styles'
+  type Task,
+} from "@/features/todolists/model/tasks-reducer"
+import DeleteIcon from "@mui/icons-material/Delete"
+import Checkbox from "@mui/material/Checkbox"
+import IconButton from "@mui/material/IconButton"
+import ListItem from "@mui/material/ListItem"
+import type { ChangeEvent } from "react"
+import { getListItemSx } from "./TaskItem.styles"
 
 type Props = {
   task: Task
